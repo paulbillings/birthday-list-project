@@ -203,3 +203,10 @@ p {
     line-height: 1;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .users img {
+    width: 100px;
+    height: 100px;
+  }
+}

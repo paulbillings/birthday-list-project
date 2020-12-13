@@ -43,7 +43,7 @@ function App() {
           {celebrities.map((celeb) => {
             console.log(celeb);
             const { celebId, name, age } = celeb;
-            const img = `https://celebritybucks.com/images/celebs/mid/${celebId}.jpg`;
+            const img = `https://celebritybucks.com/images/celebs/full/${celebId}.jpg`;
             return (
               <li key={celebId}>
                 <img
