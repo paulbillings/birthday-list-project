@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
-import data from "./data";
-import List from "./List";
-// import apiData from "./apiData";
 let apiPeopleData = {};
 
 const url = "https://celebrity-bucks.p.rapidapi.com/birthdays/JSON";
+
+let today = new Date();
+// set date to uk format
+let date =
+  today.getDate() +
+  "-" +
+  parseInt(today.getMonth() + 1) +
+  "-" +
+  today.getFullYear();
 
 function App() {
   const [celebrities, setCelebs] = useState([]);
@@ -31,6 +37,7 @@ function App() {
     <main>
       <section className="container">
         <h2>Celebrity Birthdays</h2>
+        <h3>On {date}</h3>
         <p>Found {celebrities.length} Today</p>
         <ul className="users">
           {celebrities.map((celeb) => {
